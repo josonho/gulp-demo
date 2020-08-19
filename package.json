@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/josonho/gulp-demo#readme",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
   }
 }
