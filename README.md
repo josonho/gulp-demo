@@ -63,15 +63,19 @@ yarn add gulp-concat
 ```
 #### 配置gulpfile.js
 ```javascript
-const gulp = require('gulp');
 const concat = require('gulp-concat');
+const { series, src, dest } = require('gulp');
 
-// 注册合并js的任务
-gulp.task('js', () => {
-  return gulp.src('src/js/*.js')  // 找到目标原文件
+// 注册合并压缩js的任务
+function concatJs() {
+  // return src('src/js/**/*.js')  // 深遍历
+  return src('src/js/*.js')  // 浅遍历 找到目标原文件
     .pipe(concat('build.js')) // 临时合并文件
-    .pipe(gulp.dest('dist/js/'));
-});
+    .pipe(dest('dist/js/'));  // 输出目录
+}
+
+exports.default = series(concatJs); // 默认任务 执行命令：gulp
+exports.concatJs = series(concatJs); // 单独任务 执行命令：gulp concatJs
 ```
 
 #### 执行gulp命令
@@ -80,9 +84,9 @@ gulp执行任务的语法是
 gulp 任务名
 ```
 
-我们这里的任务名是'js'，所以直接gulp js
+我们这里的任务名是'concatJs'，所以直接gulp concatJs
 ```shell
-gulp js
+gulp concatJs
 ```
 执行完之后，就会发现dist/js多了一个build.js文件，其中build.js的代码就是test1.js和test2.js合并之后的代码。
 
