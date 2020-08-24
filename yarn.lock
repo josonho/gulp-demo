@@ -804,6 +804,16 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.4.tgz?cache=0&sync_timestamp=1589682809142&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgraceful-fs%2Fdownload%2Fgraceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha1-Ila94U02MpWMRl68ltxGfKB6Kfs=
 
+gulp-babel@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.npm.taobao.org/gulp-babel/download/gulp-babel-8.0.0.tgz#e0da96f4f2ec4a88dd3a3030f476e38ab2126d87"
+  integrity sha1-4NqW9PLsSojdOjAw9HbjirISbYc=
+  dependencies:
+    plugin-error "^1.0.1"
+    replace-ext "^1.0.0"
+    through2 "^2.0.0"
+    vinyl-sourcemaps-apply "^0.2.0"
+
 gulp-cli@^2.2.0:
   version "2.3.0"
   resolved "https://registry.npm.taobao.org/gulp-cli/download/gulp-cli-2.3.0.tgz?cache=0&sync_timestamp=1591230961635&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgulp-cli%2Fdownload%2Fgulp-cli-2.3.0.tgz#ec0d380e29e52aa45e47977f0d32e18fd161122f"
@@ -836,11 +846,6 @@ gulp-concat@^2.6.1:
     concat-with-sourcemaps "^1.0.0"
     through2 "^2.0.0"
     vinyl "^2.0.0"
-
-gulp-rename@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/gulp-rename/download/gulp-rename-2.0.0.tgz#9bbc3962b0c0f52fc67cd5eaff6c223ec5b9cf6c"
-  integrity sha1-m7w5YrDA9S/GfNXq/2wiPsW5z2w=
 
 gulp-uglify@^3.0.2:
   version "3.0.2"
@@ -1551,6 +1556,16 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.npm.taobao.org/pinkie/download/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
+
+plugin-error@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/plugin-error/download/plugin-error-1.0.1.tgz#77016bd8919d0ac377fdcdd0322328953ca5781c"
+  integrity sha1-dwFr2JGdCsN3/c3QMiMolTyleBw=
+  dependencies:
+    ansi-colors "^1.0.1"
+    arr-diff "^4.0.0"
+    arr-union "^3.1.0"
+    extend-shallow "^3.0.2"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"

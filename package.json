@@ -18,6 +18,13 @@
   "homepage": "https://github.com/josonho/gulp-demo#readme",
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1"
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "babel-preset-env": "^1.7.0",
+    "gulp-babel": "^8.0.0"
   }
 }
