@@ -1,7 +1,11 @@
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
-const { series, src, dest } = require('gulp');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const cleanCss = require('gulp-clean-css');
+const rename = require('gulp-rename');
+
+const { series, parallel, src, dest } = require('gulp');
 
 // 注册合并压缩js的任务
 function concatJs() {
@@ -12,8 +16,22 @@ function concatJs() {
       presets: ['env']
     }))
     .pipe(uglify()) // 压缩build.js
+    .pipe(rename((path) => {  // 修改文件命名
+      path.basename += '.min' 
+    }))
     .pipe(dest('dist/js/'));  // 输出目录
 }
 
-exports.default = series(concatJs); // 默认任务 执行命令：gulp
-exports.concatJs = series(concatJs); // 单独任务 执行命令：gulp concatJs
+// 注册合并压缩js的任务
+function sassToCss() {
+  return src('src/scss/*.scss')
+    .pipe(sass())  // scss --> css
+    .pipe(cleanCss()) // 压缩
+    .pipe(rename((path) => {
+      path.basename += '.min'
+    }))
+    .pipe(dest('dist/css/'));
+}
+
+exports.default = series(concatJs, sassToCss); // 默认任务 执行命令：gulp
+exports.concatJs = series(concatJs); // 单独任务 执行命令：gulp js

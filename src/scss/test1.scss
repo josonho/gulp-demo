@@ -1,0 +1,168 @@
+
+.seal-list {
+  background: #f2f2f2;
+
+  & .head-btns {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    text-align: right;
+  }
+
+  & .cards {
+    overflow: hidden;
+    padding: 20px 15px 10px;
+    background: #fff;
+  }
+
+  & .card-g {
+    width: 33.3%;
+    padding: 0 5px 10px;
+    float: left;
+    color: #666;
+
+    & .card-wrap {
+      border: 1px solid #E2E3E3;
+      position: relative;
+    }
+
+    & .status-mark {
+      position: absolute;
+      top: -3px;
+      left: -1px;
+      height: 62px;
+      width: 62px;
+      font-size: 12px;
+      color: #fff;
+      padding: 12px 0 0 7px;
+      background: url(../assets/status-mark.png);
+    }
+  }
+
+  & .card-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 10px;
+    height: 43px;
+  }
+
+  & .img-g {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    padding-bottom: 17px;
+
+    & img {
+      max-width: 100%;
+      max-height: 183px;
+    }
+  }
+
+  & .operate-row {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-top: 1px solid #E2E3E3;
+
+    & .radio {
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    & .el-radio__label {
+      display: none;
+    }
+  }
+}
+
+.seal-head-operate-popover {
+  background: #fff;
+  margin: 0 !important;
+  outline: none;
+  color: #666;
+
+  & .head-operate-row {
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    
+    &:hover {
+      background: #F5F6F7;
+    }
+  }
+}
+
+.edit-seal-dialog {
+
+  & .el-radio__input {
+    vertical-align: middle;
+  }
+
+  & .edit-seal-form {
+    margin: -10px 100px -20px;
+  }
+  
+  & .el-form-item__label {
+    color: #333;
+  }
+
+  & .el-input__inner:focus {
+    border-color: #cad1db;
+  }
+
+  & .upload-wrap {
+    height: 230px;
+  }
+
+  & .seal-img {
+    margin-top: 10px;
+    width: 318px;
+    height: 220px;
+    background: #f5f6f7;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+  }
+
+  & .seal-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  & .seal-img.has {
+    background: #fff;
+    border: 2px dashed #e3e2e2;
+  }
+
+  & .seal-img .no-signature {
+    text-align: center;
+  }
+
+  & .seal-img .ech-icon-image {
+    font-size: 42px;
+  }
+
+  & .add-tip {
+    margin-top: 5px;
+    line-height: 20px;
+    text-align: left;
+
+    & .ech-icon-warning {
+      color: blue;
+    }
+
+    & .tip-title {
+      font-size: 12px;
+      color: #999;
+      margin-left: 5px;
+    }
+  }
+}
